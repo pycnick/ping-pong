@@ -1,0 +1,8 @@
+FROM golang
+
+WORKDIR go/src/app
+COPY . .
+
+RUN make client
+
+CMD ["make run_client"]

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "awsproj/internal/hashes/HashDelivery;HashDelivery";
+
+service Hasher {
+  rpc GetHash (HashRequest) returns (HashReply) {}
+}
+
+message HashRequest {
+  string str = 1;
+}
+
+message HashReply {
+  string hash = 1;
+  string error = 2;
+}

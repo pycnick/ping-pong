@@ -1,0 +1,9 @@
+FROM golang
+
+WORKDIR go/src/app
+COPY . .
+
+RUN make server
+EXPOSE 8080
+
+CMD ["make run_server"]
